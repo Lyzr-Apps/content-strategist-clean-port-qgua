@@ -1,0 +1,64 @@
+{
+  "agent_name": "Trend Research Agent",
+  "agent_id": "699a40b8482d2b477bfc4734",
+  "agent_type": "json",
+  "accessor": "json",
+  "has_module_outputs": false,
+  "response_schema": {
+    "type": "json_schema",
+    "json_schema": {
+      "name": "TrendResearchResponse",
+      "strict": true,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "trending_topics": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "topic": {"type": "string"},
+                "relevance_score": {"type": "number"},
+                "platform": {"type": "string"},
+                "description": {"type": "string"},
+                "source": {"type": "string"}
+              },
+              "required": ["topic", "relevance_score", "platform", "description", "source"],
+              "additionalProperties": false
+            }
+          },
+          "seo_keywords": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "keyword": {"type": "string"},
+                "search_volume": {"type": "string"},
+                "difficulty": {"type": "string"},
+                "platform_relevance": {"type": "string"}
+              },
+              "required": ["keyword", "search_volume", "difficulty", "platform_relevance"],
+              "additionalProperties": false
+            }
+          },
+          "hashtags": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "tag": {"type": "string"},
+                "platform": {"type": "string"},
+                "popularity": {"type": "string"}
+              },
+              "required": ["tag", "platform", "popularity"],
+              "additionalProperties": false
+            }
+          },
+          "summary": {"type": "string"}
+        },
+        "required": ["trending_topics", "seo_keywords", "hashtags", "summary"],
+        "additionalProperties": false
+      }
+    }
+  }
+}

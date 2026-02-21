@@ -1,0 +1,180 @@
+{
+  "agent_name": "Content Strategy Coordinator",
+  "agent_id": "699a40d677fba476f42d9fbe",
+  "description": "Coordinates sub-agents to research trends, generate content ideas, and produce scheduling recommendations; aggregates all outputs into a unified content strategy brief",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "strategy_title": "string",
+    "niche": "string",
+    "platforms": [
+      "string"
+    ],
+    "trending_topics": [
+      {
+        "topic": "string",
+        "relevance_score": "number",
+        "platform": "string",
+        "description": "string",
+        "source": "string"
+      }
+    ],
+    "seo_keywords": [
+      {
+        "keyword": "string",
+        "search_volume": "string",
+        "difficulty": "string",
+        "platform_relevance": "string"
+      }
+    ],
+    "hashtags": [
+      {
+        "tag": "string",
+        "platform": "string",
+        "popularity": "string"
+      }
+    ],
+    "instagram_ideas": [
+      {
+        "title": "string",
+        "description": "string",
+        "hashtags": [
+          "string"
+        ],
+        "story_angle": "string",
+        "content_format": "string"
+      }
+    ],
+    "facebook_ideas": [
+      {
+        "title": "string",
+        "description": "string",
+        "hashtags": [
+          "string"
+        ],
+        "story_angle": "string",
+        "content_format": "string"
+      }
+    ],
+    "youtube_ideas": [
+      {
+        "title": "string",
+        "description": "string",
+        "hashtags": [
+          "string"
+        ],
+        "story_angle": "string",
+        "content_format": "string"
+      }
+    ],
+    "weekly_schedule": [
+      {
+        "day": "string",
+        "slots": [
+          {
+            "time": "string",
+            "platform": "string",
+            "content_type": "string",
+            "engagement_prediction": "string"
+          }
+        ]
+      }
+    ],
+    "platform_tips": [
+      {
+        "platform": "string",
+        "frequency": "string",
+        "best_times": "string",
+        "algorithm_tip": "string"
+      }
+    ],
+    "summary": "string"
+  },
+  "example_response": {
+    "strategy_title": "sample string",
+    "niche": "sample string",
+    "platforms": [
+      "sample string"
+    ],
+    "trending_topics": [
+      {
+        "topic": "sample string",
+        "relevance_score": 0,
+        "platform": "sample string",
+        "description": "sample string",
+        "source": "sample string"
+      }
+    ],
+    "seo_keywords": [
+      {
+        "keyword": "sample string",
+        "search_volume": "sample string",
+        "difficulty": "sample string",
+        "platform_relevance": "sample string"
+      }
+    ],
+    "hashtags": [
+      {
+        "tag": "sample string",
+        "platform": "sample string",
+        "popularity": "sample string"
+      }
+    ],
+    "instagram_ideas": [
+      {
+        "title": "sample string",
+        "description": "sample string",
+        "hashtags": [
+          "sample string"
+        ],
+        "story_angle": "sample string",
+        "content_format": "sample string"
+      }
+    ],
+    "facebook_ideas": [
+      {
+        "title": "sample string",
+        "description": "sample string",
+        "hashtags": [
+          "sample string"
+        ],
+        "story_angle": "sample string",
+        "content_format": "sample string"
+      }
+    ],
+    "youtube_ideas": [
+      {
+        "title": "sample string",
+        "description": "sample string",
+        "hashtags": [
+          "sample string"
+        ],
+        "story_angle": "sample string",
+        "content_format": "sample string"
+      }
+    ],
+    "weekly_schedule": [
+      {
+        "day": "sample string",
+        "slots": [
+          {
+            "time": "sample string",
+            "platform": "sample string",
+            "content_type": "sample string",
+            "engagement_prediction": "sample string"
+          }
+        ]
+      }
+    ],
+    "platform_tips": [
+      {
+        "platform": "sample string",
+        "frequency": "sample string",
+        "best_times": "sample string",
+        "algorithm_tip": "sample string"
+      }
+    ],
+    "summary": "sample string"
+  }
+}

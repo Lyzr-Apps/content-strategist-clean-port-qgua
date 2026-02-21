@@ -1,0 +1,29 @@
+{
+  "agents": {
+    "content_strategy_coordinator": {
+      "agent_id": "699a40d677fba476f42d9fbe",
+      "type": "manager",
+      "model": "gpt-4.1",
+      "provider": "openai"
+    },
+    "trend_research_agent": {
+      "agent_id": "699a40b8482d2b477bfc4734",
+      "type": "sub-agent",
+      "model": "sonar-pro",
+      "provider": "perplexity"
+    },
+    "content_ideation_agent": {
+      "agent_id": "699a40b92248bbbc86582b2d",
+      "type": "sub-agent",
+      "model": "gpt-4.1",
+      "provider": "openai"
+    },
+    "scheduling_advisor_agent": {
+      "agent_id": "699a40b9766eae71f9d249a9",
+      "type": "sub-agent",
+      "model": "gpt-4.1",
+      "provider": "openai"
+    }
+  },
+  "workflow_created": true
+}

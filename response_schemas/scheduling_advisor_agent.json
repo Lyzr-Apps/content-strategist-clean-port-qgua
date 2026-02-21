@@ -1,0 +1,61 @@
+{
+  "agent_name": "Scheduling Advisor Agent",
+  "agent_id": "699a40b9766eae71f9d249a9",
+  "agent_type": "json",
+  "accessor": "json",
+  "has_module_outputs": false,
+  "response_schema": {
+    "type": "json_schema",
+    "json_schema": {
+      "name": "SchedulingAdvisorResponse",
+      "strict": true,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "weekly_schedule": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "day": {"type": "string"},
+                "slots": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "time": {"type": "string"},
+                      "platform": {"type": "string"},
+                      "content_type": {"type": "string"},
+                      "engagement_prediction": {"type": "string"}
+                    },
+                    "required": ["time", "platform", "content_type", "engagement_prediction"],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": ["day", "slots"],
+              "additionalProperties": false
+            }
+          },
+          "platform_tips": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "platform": {"type": "string"},
+                "frequency": {"type": "string"},
+                "best_times": {"type": "string"},
+                "algorithm_tip": {"type": "string"}
+              },
+              "required": ["platform", "frequency", "best_times", "algorithm_tip"],
+              "additionalProperties": false
+            }
+          },
+          "summary": {"type": "string"}
+        },
+        "required": ["weekly_schedule", "platform_tips", "summary"],
+        "additionalProperties": false
+      }
+    }
+  }
+}

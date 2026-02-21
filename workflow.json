@@ -1,0 +1,25 @@
+{
+  "nodes": [
+    {"id": "input_node", "type": "Input", "label": "User Input", "nodeCategory": "input"},
+    {"id": "manager_agent", "type": "Agent", "label": "Content Strategy Coordinator", "nodeCategory": "agent"},
+    {"id": "trend_agent", "type": "Agent", "label": "Trend Research Agent", "nodeCategory": "agent"},
+    {"id": "ideation_agent", "type": "Agent", "label": "Content Ideation Agent", "nodeCategory": "agent"},
+    {"id": "scheduling_agent", "type": "Agent", "label": "Scheduling Advisor Agent", "nodeCategory": "agent"},
+    {"id": "output_node", "type": "Output", "label": "Strategy Output", "nodeCategory": "end"}
+  ],
+  "edges": [
+    {"source": "input_node", "target": "manager_agent"},
+    {"source": "manager_agent", "target": "trend_agent"},
+    {"source": "manager_agent", "target": "ideation_agent"},
+    {"source": "manager_agent", "target": "scheduling_agent"},
+    {"source": "trend_agent", "target": "output_node"},
+    {"source": "ideation_agent", "target": "output_node"},
+    {"source": "scheduling_agent", "target": "output_node"}
+  ],
+  "agents": {
+    "content_strategy_coordinator": {"id": "699a40d677fba476f42d9fbe", "type": "manager"},
+    "trend_research_agent": {"id": "699a40b8482d2b477bfc4734", "type": "sub-agent"},
+    "content_ideation_agent": {"id": "699a40b92248bbbc86582b2d", "type": "sub-agent"},
+    "scheduling_advisor_agent": {"id": "699a40b9766eae71f9d249a9", "type": "sub-agent"}
+  }
+}

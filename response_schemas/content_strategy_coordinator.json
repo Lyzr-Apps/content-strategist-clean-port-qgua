@@ -1,0 +1,151 @@
+{
+  "agent_name": "Content Strategy Coordinator",
+  "agent_id": "699a40d677fba476f42d9fbe",
+  "agent_type": "json",
+  "accessor": "json",
+  "has_module_outputs": false,
+  "response_schema": {
+    "type": "json_schema",
+    "json_schema": {
+      "name": "ContentStrategyResponse",
+      "strict": true,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "strategy_title": {"type": "string"},
+          "niche": {"type": "string"},
+          "platforms": {"type": "array", "items": {"type": "string"}},
+          "trending_topics": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "topic": {"type": "string"},
+                "relevance_score": {"type": "number"},
+                "platform": {"type": "string"},
+                "description": {"type": "string"},
+                "source": {"type": "string"}
+              },
+              "required": ["topic", "relevance_score", "platform", "description", "source"],
+              "additionalProperties": false
+            }
+          },
+          "seo_keywords": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "keyword": {"type": "string"},
+                "search_volume": {"type": "string"},
+                "difficulty": {"type": "string"},
+                "platform_relevance": {"type": "string"}
+              },
+              "required": ["keyword", "search_volume", "difficulty", "platform_relevance"],
+              "additionalProperties": false
+            }
+          },
+          "hashtags": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "tag": {"type": "string"},
+                "platform": {"type": "string"},
+                "popularity": {"type": "string"}
+              },
+              "required": ["tag", "platform", "popularity"],
+              "additionalProperties": false
+            }
+          },
+          "instagram_ideas": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": {"type": "string"},
+                "description": {"type": "string"},
+                "hashtags": {"type": "array", "items": {"type": "string"}},
+                "story_angle": {"type": "string"},
+                "content_format": {"type": "string"}
+              },
+              "required": ["title", "description", "hashtags", "story_angle", "content_format"],
+              "additionalProperties": false
+            }
+          },
+          "facebook_ideas": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": {"type": "string"},
+                "description": {"type": "string"},
+                "hashtags": {"type": "array", "items": {"type": "string"}},
+                "story_angle": {"type": "string"},
+                "content_format": {"type": "string"}
+              },
+              "required": ["title", "description", "hashtags", "story_angle", "content_format"],
+              "additionalProperties": false
+            }
+          },
+          "youtube_ideas": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": {"type": "string"},
+                "description": {"type": "string"},
+                "hashtags": {"type": "array", "items": {"type": "string"}},
+                "story_angle": {"type": "string"},
+                "content_format": {"type": "string"}
+              },
+              "required": ["title", "description", "hashtags", "story_angle", "content_format"],
+              "additionalProperties": false
+            }
+          },
+          "weekly_schedule": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "day": {"type": "string"},
+                "slots": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "time": {"type": "string"},
+                      "platform": {"type": "string"},
+                      "content_type": {"type": "string"},
+                      "engagement_prediction": {"type": "string"}
+                    },
+                    "required": ["time", "platform", "content_type", "engagement_prediction"],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": ["day", "slots"],
+              "additionalProperties": false
+            }
+          },
+          "platform_tips": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "platform": {"type": "string"},
+                "frequency": {"type": "string"},
+                "best_times": {"type": "string"},
+                "algorithm_tip": {"type": "string"}
+              },
+              "required": ["platform", "frequency", "best_times", "algorithm_tip"],
+              "additionalProperties": false
+            }
+          },
+          "summary": {"type": "string"}
+        },
+        "required": ["strategy_title", "niche", "platforms", "trending_topics", "seo_keywords", "hashtags", "instagram_ideas", "facebook_ideas", "youtube_ideas", "weekly_schedule", "platform_tips", "summary"],
+        "additionalProperties": false
+      }
+    }
+  }
+}

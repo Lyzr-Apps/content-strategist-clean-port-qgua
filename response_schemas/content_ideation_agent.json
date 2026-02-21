@@ -1,0 +1,67 @@
+{
+  "agent_name": "Content Ideation Agent",
+  "agent_id": "699a40b92248bbbc86582b2d",
+  "agent_type": "json",
+  "accessor": "json",
+  "has_module_outputs": false,
+  "response_schema": {
+    "type": "json_schema",
+    "json_schema": {
+      "name": "ContentIdeationResponse",
+      "strict": true,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "instagram_ideas": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": {"type": "string"},
+                "description": {"type": "string"},
+                "hashtags": {"type": "array", "items": {"type": "string"}},
+                "story_angle": {"type": "string"},
+                "content_format": {"type": "string"}
+              },
+              "required": ["title", "description", "hashtags", "story_angle", "content_format"],
+              "additionalProperties": false
+            }
+          },
+          "facebook_ideas": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": {"type": "string"},
+                "description": {"type": "string"},
+                "hashtags": {"type": "array", "items": {"type": "string"}},
+                "story_angle": {"type": "string"},
+                "content_format": {"type": "string"}
+              },
+              "required": ["title", "description", "hashtags", "story_angle", "content_format"],
+              "additionalProperties": false
+            }
+          },
+          "youtube_ideas": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": {"type": "string"},
+                "description": {"type": "string"},
+                "hashtags": {"type": "array", "items": {"type": "string"}},
+                "story_angle": {"type": "string"},
+                "content_format": {"type": "string"}
+              },
+              "required": ["title", "description", "hashtags", "story_angle", "content_format"],
+              "additionalProperties": false
+            }
+          },
+          "summary": {"type": "string"}
+        },
+        "required": ["instagram_ideas", "facebook_ideas", "youtube_ideas", "summary"],
+        "additionalProperties": false
+      }
+    }
+  }
+}
